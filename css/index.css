@@ -1,6 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Playwrite+CA:wght@100..400&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Tangerine:wght@400;700&display=swap");
-
+@import url('https://fonts.googleapis.com/css2?family=Charm:wght@400;700&display=swap');
 /* Reset */
 * {
   margin: 0;
@@ -70,18 +70,32 @@
   color: #3e6b3e;
 }
 
-/* Datas */
+/* Datas e localização */
 .data {
   text-align: center;
   font-size: 1.2rem;
+  font-family: "Charm", cursive;
   color: #8c6a3e;
-  margin-top: 30px;
+  margin-top: 2rem;
 }
 
 .data strong {
   font-size: 2rem;
   margin: 0 8px;
   color: inherit;
+}
+.conteiner_h4{
+  align-items: center;
+  text-align: center;
+  gap: 1rem;
+  margin-top: 2rem;
+}
+.h4_titulo{
+  font-family: "Charm", cursive;
+  text-align: center;
+  font-size: 1.2rem;
+  color: #8c6a3e;
+  margin-top: 30px;
 }
 
 /* Botões */
