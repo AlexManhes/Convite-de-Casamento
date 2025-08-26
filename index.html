@@ -1,32 +1,70 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Convite de Casamento</title>
-    <link rel="stylesheet" href="./css/index.css" />
-  </head>
-  <body>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Convite de Casamento</title>
+  <link rel="stylesheet" href="./css/index.css" />
+</head>
+
+<body>
+  <header>
+    <div class="conteiner__header_h1">
+      <h1 class="header_h1">A & N</h1>
+    </div>
+  </header>
+
+  <section>
     <div class="convite">
       <img src="./img/for_superior.png" class="flores top-left" alt="Flores" />
-      <img
-        src="./img/flor_inferior.png"
-        class="flores bottom-right"
-        alt="Flores"
-      />
-
-      <h3>Você está convidado para a nossa cerimônia de casamento</h3>
-      <h1>NATHALIA<br />&<br />ALEX</h1>
-      <div class="data">
-        OUTUBRO <br />
-        SABADO <strong>25</strong> AT 09 AM <br />
-        2025
-      </div>
-
-      <div class="buttons">
-        <button>Confirmar presença</button>
-        <button>Não irei</button>
-      </div>
+      <img src="./img/flor_inferior.png" class="flores bottom-right" alt="Flores" />
     </div>
-  </body>
+
+    <div class="conteiner_h3">
+      <h3 class="h3_titulo">
+        Você está convidado para a nossa cerimônia de casamento
+      </h3>
+    </div>
+
+    <div class="conteiner_corpo__h1">
+      <h1 class="h1_corpo">
+        Nathalia
+        <br />&<br />
+        Alex
+      </h1>
+    </div>
+
+    <div class="data">
+      OUTUBRO <br />
+      SÁBADO <strong>25</strong> ÀS 13 Hrs <br />
+      2025
+    </div>
+
+    <div class="buttons">
+      <button id="button__presente">Estarei presente</button>
+      <button id="button__naoPresente">Não poderei ir</button>
+    </div>
+
+    <!-- Formulário invisível inicialmente -->
+    <form class="conteiner_nome__presensa" id="form_presenca" style="display: none;">
+      <p class="texto_nome__presensa">
+        Nome:
+        <input type="text" name="nome" id="nome_presensa" class="nome_presensa" required />
+        <br />
+        Quantidade de pessoas:
+        <input type="number" name="qtd" id="qtd_pessoas" class="qtd_pessoas" required />
+      </p>
+      <button type="submit" class="botao_enviar">Enviar</button>
+    </form>
+
+    <!-- Mensagem de sucesso -->
+    <div id="mensagem_sucesso" class="mensagem_sucesso">
+      Confirmação enviada com sucesso! 🎉
+    </div>
+  </section>
+
+  <script src="./index.js"></script>
+</body>
+
 </html>

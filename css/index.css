@@ -1,66 +1,92 @@
 @import url("https://fonts.googleapis.com/css2?family=Playwrite+CA:wght@100..400&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Tangerine:wght@400;700&display=swap");
 
-body {
+/* Reset */
+* {
   margin: 0;
   padding: 0;
-  font-family: "Georgia", serif;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  min-height: 100vh;
-}
-
-.convite {
-  width: 100%;
-  max-width: 600px;
-  text-align: center;
-  position: relative;
-  background-size: cover;
-  background-position: center;
+  box-sizing: border-box;
 }
 
 /* Flores nos cantos */
 .flores {
   position: absolute;
-  width: 150px;
   opacity: 0.9;
+  max-width: 500px;
+  height: auto;
 }
+
 .flores.top-left {
-  top: -20px;
-  left: -20px;
+  top: -10px;
+  left: -10px;
 }
+
 .flores.bottom-right {
-  bottom: -20px;
-  right: -20px;
+  bottom: 0;
+  right: 0;
 }
 
-h3 {
-  font-size: 0.9rem;
-  font-weight: 400;
-  letter-spacing: 1px;
-  color: #444;
-  margin-bottom: 20px;
+/* Header */
+.conteiner__header_h1 {
+  display: flex;
+  justify-content: center;
+  margin: 1rem 0;
 }
 
-h1 {
-  font-size: 2.5rem;
+.header_h1 {
+  font-family: "Tangerine", cursive;
+  font-weight: 700;
+  font-size: clamp(2.5rem, 6vw, 4rem);
+  font-style: italic;
   color: #3e6b3e;
-  margin: 10px 0;
+  text-align: center;
 }
 
+.conteiner_h3 {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  margin-bottom: 1.2rem;
+}
+
+.h3_titulo {
+  font-family: "Playwrite CA", sans-serif;
+  font-size: 0.9rem;
+  letter-spacing: 1px;
+  color: black;
+}
+
+/* Corpo */
+.conteiner_corpo__h1 {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  margin: 1rem 0;
+}
+
+.h1_corpo {
+  font-family: "Playwrite CA", sans-serif;
+  font-size: clamp(1.8rem, 4vw, 2.5rem);
+  color: #3e6b3e;
+}
+
+/* Datas */
 .data {
+  text-align: center;
   font-size: 1.2rem;
-  margin-top: 30px;
   color: #8c6a3e;
+  margin-top: 30px;
 }
 
 .data strong {
   font-size: 2rem;
   margin: 0 8px;
-  color: #8c6a3e;
+  color: inherit;
 }
 
+/* Botões */
 .buttons {
+  text-align: center;
   margin-top: 30px;
 }
 
@@ -69,22 +95,124 @@ h1 {
   color: #fff;
   border: none;
   padding: 12px 25px;
-  margin: 10px;
+  margin: 0.8rem;
   border-radius: 8px;
   font-size: 1rem;
   cursor: pointer;
-  transition: 0.3s;
+  transition: 0.3s ease;
 }
 
 .buttons button:hover {
   background: #2d4e2d;
+  transform: scale(1.05);
 }
 
-@media (max-width: 480px) {
-  h1 {
+/* Formulário */
+.conteiner_nome__presensa {
+  text-align: center;
+  margin-top: 1rem;
+  display: none;
+  transition: all 0.5s ease-in-out;
+}
+
+.texto_nome__presensa {
+  color: #3e6b3e;
+  font-family: "Playwrite CA", sans-serif;
+}
+
+.nome_presensa,
+.qtd_pessoas {
+  border-radius: 2rem;
+  padding: 0.5rem 1rem;
+  text-align: center;
+  margin: 0.3rem 0;
+  font-family: inherit;
+  border: 1px solid #ccc;
+  outline: none;
+}
+
+.nome_presensa {
+  width: 12rem;
+}
+
+.qtd_pessoas {
+  width: 4.5rem;
+}
+
+.botao_enviar {
+  background: #3e6b3e;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 8px;
+  cursor: pointer;
+  margin-top: 0.5rem;
+  transition: 0.3s ease;
+}
+
+.botao_enviar:hover {
+  background: #2d4e2d;
+}
+
+/* Mensagem de sucesso */
+.mensagem_sucesso {
+  display: none;
+  color: green;
+  margin-top: 1rem;
+  text-align: center;
+  font-weight: bold;
+}
+
+/* Responsividade */
+@media screen and (max-width: 768px) {
+  .header_h1 {
+    font-size: 2.5rem;
+  }
+
+  .h1_corpo {
+    font-size: 1.8rem;
+  }
+
+  .h3_titulo {
+    font-size: 0.8rem;
+  }
+
+  .buttons button {
+    width: 80%;
+    max-width: 300px;
+    padding: 12px;
+    font-size: 1rem;
+  }
+
+  .nome_presensa {
+    width: 80%;
+    max-width: 250px;
+  }
+
+  .qtd_pessoas {
+    width: 60px;
+  }
+
+  .flores {
+    max-width: 500px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .header_h1 {
     font-size: 2rem;
   }
-  .data strong {
-    font-size: 1.6rem;
+
+  .h1_corpo {
+    font-size: 1.5rem;
+  }
+
+  .buttons button {
+    font-size: 0.9rem;
+    padding: 10px;
+  }
+
+  .flores {
+    max-width: 250px;
   }
 }
