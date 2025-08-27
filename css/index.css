@@ -17,11 +17,16 @@
 }
 
 .flores.top-left {
+  position: fixed;
+  max-width: 100%;
   top: -10px;
   left: -10px;
 }
 
 .flores.bottom-right {
+  position: fixed;
+  max-width: 100%;
+  height: auto;
   bottom: 0;
   right: 0;
 }
@@ -66,7 +71,7 @@
 
 .h1_corpo {
   font-family: "Tangerine", cursive;
-    font-size: clamp(5rem, 4vw, 2.5rem);
+    font-size: 5rem;
   color: #3e6b3e;
 }
 
@@ -102,34 +107,46 @@
 .buttons {
   text-align: center;
   margin-top: 30px;
+  position: relative;
+  z-index: 2;
 }
 
-.buttons button {
+.button__presente{
   background: #3e6b3e;
   color: #fff;
   border: none;
   padding: 12px 25px;
-  margin: 0.8rem;
+  margin: 10px;
   border-radius: 8px;
   font-size: 1rem;
-  cursor: pointer;
-  transition: 0.3s ease;
+  width: 80%;
+  max-width: 200px;
+}
+.button__naoPresente{
+background: #3e6b3e;
+color: #fff;
+border: none;
+padding: 12px 25px;
+margin: 10px;
+border-radius: 8px;
+font-size: 1rem;
+width: 80%;
+max-width: 200px;
 }
 
-.buttons button:hover {
-  background: #2d4e2d;
-  transform: scale(1.05);
-}
 
 /* Formulário */
 .conteiner_nome__presensa {
   text-align: center;
   margin-top: 1rem;
   display: none;
+  text-align: center;
+  position: relative;
+  z-index: 2;
   transition: all 0.5s ease-in-out;
 }
 
-.texto_nome__presensa {
+.texto_de__presensa {
   color: #3e6b3e;
   font-family: "Playwrite CA", sans-serif;
 }
@@ -146,11 +163,11 @@
 }
 
 .nome_presensa {
-  width: 12rem;
+  width: 10rem;
 }
 
 .qtd_pessoas {
-  width: 4.5rem;
+  width: 4rem;
 }
 
 .botao_enviar {
@@ -186,7 +203,7 @@
   }
 
   .h1_corpo {
-    font-size: 1.8rem;
+    font-size: 3rem;
   }
 
   .h3_titulo {
@@ -194,8 +211,10 @@
   }
 
   .buttons button {
+    align-items: center;
+    justify-content: center;
     width: 80%;
-    max-width: 300px;
+    max-width: 200px;
     padding: 12px;
     font-size: 1rem;
   }
@@ -212,6 +231,7 @@
   .flores {
     max-width: 500px;
   }
+
 }
 
 @media screen and (max-width: 480px) {
