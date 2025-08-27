@@ -1,13 +1,13 @@
 @import url("https://fonts.googleapis.com/css2?family=Playwrite+CA:wght@100..400&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Tangerine:wght@400;700&display=swap");
 @import url('https://fonts.googleapis.com/css2?family=Charm:wght@400;700&display=swap');
+
 /* Reset */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
-
 /* Flores nos cantos */
 .flores {
   position: absolute;
@@ -65,8 +65,8 @@
 }
 
 .h1_corpo {
-  font-family: "Playwrite CA", sans-serif;
-  font-size: clamp(1.8rem, 4vw, 2.5rem);
+  font-family: "Tangerine", cursive;
+    font-size: clamp(5rem, 4vw, 2.5rem);
   color: #3e6b3e;
 }
 
@@ -172,9 +172,11 @@
 .mensagem_sucesso {
   display: none;
   color: green;
+  font-size: 2rem;
   margin-top: 1rem;
   text-align: center;
   font-weight: bold;
+  font-family: "Charm", cursive;
 }
 
 /* Responsividade */

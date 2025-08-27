@@ -11,6 +11,8 @@ function initConvite() {
   const formPresenca = document.getElementById("form_presenca");
   const mensagemSucesso = document.getElementById("mensagem_sucesso");
 
+  const btnSumir = document.querySelector(".buttons");
+
   // === Função para enviar dados ao Google Forms ===
   function enviarDados(nome, qtd, callback) {
     const url = `https://docs.google.com/forms/d/e/${GOOGLE_FORM_ID}/formResponse`;
@@ -26,39 +28,47 @@ function initConvite() {
   // === Envio de presença ===
   function enviarPresenca(nome, qtd) {
     enviarDados(nome, qtd, (sucesso) => {
-      formPresenca.style.display = "none";
+      esconderForm();
       mensagemSucesso.style.display = "block";
       mensagemSucesso.textContent = sucesso
         ? "Confirmação enviada com sucesso! 🎉"
         : "Erro ao enviar, tente novamente!";
+      btnSumir.style.display = "none";
       formPresenca.reset();
-      resetForms(); // chama o reset automático
+      resetForms();
     });
   }
 
   // === Envio de ausência ===
   function enviarAusencia() {
     enviarDados("Não estará presente", 1, (sucesso) => {
-      formPresenca.style.display = "none";
+      esconderForm();
       mensagemSucesso.style.display = "block";
       mensagemSucesso.textContent = sucesso
         ? "Sentiremos sua falta! 😢"
         : "Erro ao enviar, tente novamente!";
-      resetForms(); // chama o reset automático
+      resetForms();
     });
+  }
+
+  // === Função auxiliar ===
+  function esconderForm() {
+    formPresenca.style.display = "none";
   }
 
   // === Função de reset geral após alguns segundos ===
   function resetForms() {
     setTimeout(() => {
-      formPresenca.style.display = "none";
+      esconderForm();
       mensagemSucesso.style.display = "none";
       formPresenca.reset();
-    }, 5000); // 5 segundos antes de resetar
+      btnSumir.style.display = "block"; // mostra botões de novo
+    }, 5000);
   }
 
   // === Eventos de clique ===
   buttonPresente.addEventListener("click", () => {
+    btnSumir.style.display = "none";
     formPresenca.style.display = "block";
     mensagemSucesso.style.display = "none";
   });
