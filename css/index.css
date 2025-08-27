@@ -259,14 +259,16 @@
   }
 
   .h1_corpo {
-    font-size: 1.5rem;
+    font-size: 3rem;
   }
 
   .buttons button {
     font-size: 0.9rem;
     padding: 10px;
   }
-
+.h4_titulo{
+  font-size: 1rem;
+}
   .flores {
     max-width: 150px;
     position: relative;
