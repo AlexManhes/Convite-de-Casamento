@@ -230,6 +230,8 @@
 
   .flores {
     max-width: 500px;
+    position: relative;
+    z-index: -1;
   }
 
 }
@@ -250,6 +252,8 @@
 
   .flores {
     max-width: 250px;
+    position: relative;
+    z-index: -1;
   }
 }
 
