@@ -106,9 +106,9 @@
 /* Botões */
 .buttons {
   text-align: center;
-  margin-top: 30px;
   position: relative;
   z-index: 2;
+  margin-top: 30px;
 }
 
 .button__presente{
@@ -123,15 +123,15 @@
   max-width: 200px;
 }
 .button__naoPresente{
-background: #3e6b3e;
-color: #fff;
-border: none;
-padding: 12px 25px;
-margin: 10px;
-border-radius: 8px;
-font-size: 1rem;
-width: 80%;
-max-width: 200px;
+  background: #3e6b3e;
+  color: #fff;
+  border: none;
+  padding: 12px 25px;
+  margin: 10px;
+  border-radius: 8px;
+  font-size: 1rem;
+  width: 80%;
+  max-width: 200px;
 }
 
 

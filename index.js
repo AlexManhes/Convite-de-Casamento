@@ -43,6 +43,7 @@ function initConvite() {
   function enviarAusencia() {
     enviarDados("Não estará presente", 1, (sucesso) => {
       esconderForm();
+      btnSumir.style.display = "none";
       mensagemSucesso.style.display = "block";
       mensagemSucesso.textContent = sucesso
         ? "Sentiremos sua falta! 😢"
