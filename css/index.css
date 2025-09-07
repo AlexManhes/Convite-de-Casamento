@@ -1,6 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Playwrite+CA:wght@100..400&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Tangerine:wght@400;700&display=swap");
-@import url('https://fonts.googleapis.com/css2?family=Charm:wght@400;700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Charm:wght@400;700&display=swap");
 
 /* Reset */
 * {
@@ -71,7 +71,7 @@
 
 .h1_corpo {
   font-family: "Tangerine", cursive;
-    font-size: 5rem;
+  font-size: 5rem;
   color: #3e6b3e;
 }
 
@@ -89,13 +89,13 @@
   margin: 0 8px;
   color: inherit;
 }
-.conteiner_h4{
+.conteiner_h4 {
   align-items: center;
   text-align: center;
   gap: 1rem;
   margin-top: 2rem;
 }
-.h4_titulo{
+.h4_titulo {
   font-family: "Charm", cursive;
   text-align: center;
   font-size: 1.2rem;
@@ -111,7 +111,7 @@
   margin-top: 30px;
 }
 
-.button__presente{
+.button__presente {
   background: #3e6b3e;
   color: #fff;
   border: none;
@@ -122,7 +122,7 @@
   width: 80%;
   max-width: 200px;
 }
-.button__naoPresente{
+.button__naoPresente {
   background: #3e6b3e;
   color: #fff;
   border: none;
@@ -133,7 +133,6 @@
   width: 80%;
   max-width: 200px;
 }
-
 
 /* Formulário */
 .conteiner_nome__presensa {
@@ -233,7 +232,6 @@
     position: relative;
     z-index: -1;
   }
-
 }
 
 @media screen and (max-width: 480px) {
@@ -270,9 +268,31 @@
     font-size: 0.9rem;
     padding: 10px;
   }
-.h4_titulo{
-  font-size: 1rem;
+  .h4_titulo {
+    font-size: 1rem;
+  }
+  .flores {
+    max-width: 150px;
+    position: relative;
+    z-index: -1;
+  }
 }
+@media screen and (max-width: 480px) {
+  .header_h1 {
+    font-size: 2rem;
+  }
+
+  .h1_corpo {
+    font-size: 3rem;
+  }
+
+  .buttons button {
+    font-size: 0.9rem;
+    padding: 10px;
+  }
+  .h4_titulo {
+    font-size: 1rem;
+  }
   .flores {
     max-width: 150px;
     position: relative;
